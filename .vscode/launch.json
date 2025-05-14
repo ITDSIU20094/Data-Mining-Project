@@ -1,0 +1,55 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Test_Model",
+      "request": "launch",
+      "mainClass": "Test_Model",
+      "projectName": "Project_cac2e5b8"
+    },
+    {
+      "type": "java",
+      "name": "NaiveBayesClassifier",
+      "request": "launch",
+      "mainClass": "Models.Build.NaiveBayesClassifier",
+      "projectName": "Project_cac2e5b8"
+    },
+    {
+      "type": "java",
+      "name": "Step4A_Folds_RandomTree",
+      "request": "launch",
+      "mainClass": "Models.Build.Step4A_Folds_RandomTree",
+      "projectName": "Project_cac2e5b8"
+    },
+    {
+      "type": "java",
+      "name": "CustomPredictor",
+      "request": "launch",
+      "mainClass": "CustomPredictor",
+      "projectName": "Project_cac2e5b8"
+    },
+    {
+      "type": "java",
+      "name": "Verify_Model",
+      "request": "launch",
+      "mainClass": "Verify_Model",
+      "projectName": "Project_cac2e5b8"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "Main",
+      "projectName": "Project_cac2e5b8",
+      "vmArgs": [
+        "--add-opens=java.base/java.lang=ALL-UNNAMED",
+        "--add-opens=java.base/java.io=ALL-UNNAMED",
+        "--add-opens=java.base/java.util=ALL-UNNAMED",
+        "--add-opens=java.base/java.util.zip=ALL-UNNAMED",
+        "--add-opens=java.base/java.net=ALL-UNNAMED",
+        "--add-exports=java.base/sun.net.www.protocol.file=ALL-UNNAMED"
+      ]
+    }
+  ]
+}
