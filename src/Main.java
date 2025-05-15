@@ -1,7 +1,10 @@
-import Models.Build.NaiveBayes_Classifier;
-import Models.Build.RandomTree_Classifier;
-import Models.Build.SMO_Classifier;
+import Models.Build.Classification_Model.*;
+import Models.Build.Regression_Model.DecisionTreeRegression;
+import Models.Build.Regression_Model.LinearRegression_model;
+import Models.Build.Regression_Model.SupportVectorRegression;
 import Processing.*;
+import weka.core.pmml.jaxbbindings.Decision;
+import weka.core.pmml.jaxbbindings.SupportVector;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -28,10 +31,21 @@ public class Main {
             // Split_TrainTest.splitData(filterPath, trainPath, testPath, 0.8);
             Split_TrainTest.splitData(wrapperPath, trainPath, testPath, 0.8);
 
-            // Run classifiers with specified class index
-            NaiveBayes_Classifier.buildNaiveBayes(trainPath, testPath);
-            RandomTree_Classifier.buildRandomTree(trainPath, testPath);
-            SMO_Classifier.buildSMO(trainPath, testPath);
+            // Run classifiers
+            // NaiveBayes_Classifier.buildNaiveBayes(trainPath, testPath);
+            // RandomTree_Classifier.buildRandomTree(trainPath, testPath);
+            // J48_Classifier.PrunedJ48(trainPath, testPath);
+            // J48_Classifier.UnprunedJ48(trainPath, testPath);
+            // SMO_Classifier.buildSMO(trainPath, testPath);
+            // IBK_Classifier.buildIBK(trainPath, testPath);
+            // ZeroR_Classifier.buildZeroR(trainPath, testPath);
+            OneR_Classifier.buildOneR(trainPath, testPath);
+
+            // Run regression model
+            // LinearRegression_model.buildLinearRegression(trainPath, testPath);
+            // DecisionTreeRegression.buildDecisionTree(trainPath, testPath);
+            // SupportVectorRegression.buildSMOreg(trainPath, testPath);
+
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
             e.printStackTrace();

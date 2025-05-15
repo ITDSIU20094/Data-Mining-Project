@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Classification_Test",
+      "request": "launch",
+      "mainClass": "Classification_Test",
+      "projectName": "Project_cac2e5b8"
+    },
+    {
+      "type": "java",
+      "name": "Regression_Test",
+      "request": "launch",
+      "mainClass": "Regression_Test",
+      "projectName": "Project_cac2e5b8"
+    },
+    {
+      "type": "java",
       "name": "Test_Model",
       "request": "launch",
       "mainClass": "Test_Model",
