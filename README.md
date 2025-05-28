@@ -5,13 +5,14 @@ This repository contains the final project for the Data Mining Framework course 
 ## Table of Contents
 
 - [Project Overview](#project-overview)
+- [Team Members](#team-members)
 - [Dataset Description](#dataset-description)
 - [Pre-processing](#pre-processing)
 - [Models and Algorithms](#models-and-algorithms)
 - [Evaluation](#evaluation)
 - [Future Work](#future-work)
 - [Getting Started](#getting-started)
-- [Team Members](#team-members)
+
 
 ---
 
@@ -22,6 +23,16 @@ With the increasing complexity of customer behavior in e-commerce, particularly 
 We applied both classification and regression techniques to understand what influences product performance (units sold and rating) on the Wish platform.
 
 ---
+
+## Team Members
+
+| Name              | Student ID   | Role   | Contribution |
+|-------------------|--------------|--------|--------------|
+| Nguyễn Minh Quân  | ITDSIU20094  | Leader | 20%          |
+| Nguyễn Mai Phương | ITDSIU20105  | Member | 20%          |
+| Phan Thế Thiện    | ITDSIU20084  | Member | 20%          |
+| Mai Quốc Bình     | ITDSIU21077  | Member | 20%          |
+| Đồng Minh Thắng   | ITITIU20303  | Member | 20%          |
 
 ## Dataset Description
 
@@ -109,12 +120,4 @@ This project is developed in Java using Visual Studio Code.
 3. Compile and run the Java files from the `src` folder
 4. Use WEKA for model building if applicable
 
-## Team Members
 
-| Name              | Student ID   | Role   | Contribution |
-|-------------------|--------------|--------|--------------|
-| Nguyễn Minh Quân  | ITDSIU20094  | Leader | 20%          |
-| Nguyễn Mai Phương | ITDSIU20105  | Member | 20%          |
-| Phan Thế Thiện    | ITDSIU20084  | Member | 20%          |
-| Mai Quốc Bình     | ITDSIU21077  | Member | 20%          |
-| Đồng Minh Thắng   | ITITIU20303  | Member | 20%          |
