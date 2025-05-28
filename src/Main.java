@@ -32,19 +32,19 @@ public class Main {
             Split_TrainTest.splitData(wrapperPath, trainPath, testPath, 0.8);
 
             // Run classifiers
-            // NaiveBayes_Classifier.buildNaiveBayes(trainPath, testPath);
-            // RandomTree_Classifier.buildRandomTree(trainPath, testPath);
-            // J48_Classifier.PrunedJ48(trainPath, testPath);
-            // J48_Classifier.UnprunedJ48(trainPath, testPath);
-            // SMO_Classifier.buildSMO(trainPath, testPath);
-            // IBK_Classifier.buildIBK(trainPath, testPath);
-            // ZeroR_Classifier.buildZeroR(trainPath, testPath);
+            NaiveBayes_Classifier.buildNaiveBayes(trainPath, testPath);
+            RandomTree_Classifier.buildRandomTree(trainPath, testPath);
+            J48_Classifier.PrunedJ48(trainPath, testPath);
+            J48_Classifier.UnprunedJ48(trainPath, testPath);
+            SMO_Classifier.buildSMO(trainPath, testPath);
+            IBK_Classifier.buildIBK(trainPath, testPath);
+            ZeroR_Classifier.buildZeroR(trainPath, testPath);
             OneR_Classifier.buildOneR(trainPath, testPath);
 
             // Run regression model
-            // LinearRegression_model.buildLinearRegression(trainPath, testPath);
-            // DecisionTreeRegression.buildDecisionTree(trainPath, testPath);
-            // SupportVectorRegression.buildSMOreg(trainPath, testPath);
+            LinearRegression_model.buildLinearRegression(trainPath, testPath);
+            DecisionTreeRegression.buildDecisionTree(trainPath, testPath);
+            SupportVectorRegression.buildSMOreg(trainPath, testPath);
 
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
