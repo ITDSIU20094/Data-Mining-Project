@@ -11,8 +11,6 @@ This repository contains the final project for the Data Mining Framework course 
 - [Evaluation](#evaluation)
 - [Future Work](#future-work)
 - [Getting Started](#getting-started)
-- [Folder Structure](#folder-structure)
-- [Dependency Management](#dependency-management)
 - [Team Members](#team-members)
 
 ---
@@ -95,3 +93,28 @@ We applied both classification and regression techniques to understand what infl
 - Improve performance with oversampling (SMOTE) and undersampling (NearMiss)
 - Explore ensemble methods and deep learning approaches
 - Apply cross-validation more extensively to prevent overfitting
+
+## Getting Started
+
+This project is developed in Java using Visual Studio Code.
+
+### Prerequisites:
+- Java Development Kit (JDK)
+- Visual Studio Code with Java extensions
+- WEKA (for model training and evaluation)
+
+### How to Run:
+1. Clone the repository
+2. Import the project into VS Code
+3. Compile and run the Java files from the `src` folder
+4. Use WEKA for model building if applicable
+
+## Team Members
+
+| Name              | Student ID   | Role   | Contribution |
+|-------------------|--------------|--------|--------------|
+| Nguyễn Minh Quân  | ITDSIU20094  | Leader | 20%          |
+| Nguyễn Mai Phương | ITDSIU20105  | Member | 20%          |
+| Phan Thế Thiện    | ITDSIU20084  | Member | 20%          |
+| Mai Quốc Bình     | ITDSIU21077  | Member | 20%          |
+| Đồng Minh Thắng   | ITITIU20303  | Member | 20%          |
