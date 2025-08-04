@@ -8,7 +8,7 @@ This repository contains the final project for the Data Mining Framework course 
 - [Team Members](#team-members)
 - [Dataset Description](#dataset-description)
 - [Pre-processing](#pre-processing)
-- [Models and Algorithms](#models-and-algorithms)
+- [Models](#models)
 - [Evaluation](#evaluation)
 - [Future Work](#future-work)
 - [Getting Started](#getting-started)
