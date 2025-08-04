@@ -13,7 +13,6 @@ This repository contains the final project for the Data Mining Framework course 
 - [Future Work](#future-work)
 - [Getting Started](#getting-started)
 
-
 ---
 
 ## Project Overview
@@ -26,13 +25,13 @@ We applied both classification and regression techniques to understand what infl
 
 ## Team Members
 
-| Name              | Student ID   | Role   | Contribution |
-|-------------------|--------------|--------|--------------|
-| Nguyễn Minh Quân  | ITDSIU20094  | Leader | 20%          |
-| Nguyễn Mai Phương | ITDSIU20105  | Member | 20%          |
-| Phan Thế Thiện    | ITDSIU20084  | Member | 20%          |
-| Mai Quốc Bình     | ITDSIU21077  | Member | 20%          |
-| Đồng Minh Thắng   | ITITIU20303  | Member | 20%          |
+| Name              | Student ID  | Role   | Contribution |
+| ----------------- | ----------- | ------ | ------------ |
+| Nguyễn Minh Quân  | ITDSIU20094 | Leader | 20%          |
+| Nguyễn Mai Phương | ITDSIU20105 | Member | 20%          |
+| Phan Thế Thiện    | ITDSIU20084 | Member | 20%          |
+| Mai Quốc Bình     | ITDSIU21077 | Member | 20%          |
+| Đồng Minh Thắng   | ITITIU20303 | Member | 20%          |
 
 ## Dataset Description
 
@@ -41,12 +40,14 @@ We applied both classification and regression techniques to understand what infl
 - **Attributes**: 43 attributes including product details, pricing, marketing tags, and performance metrics
 
 ### Sample Attributes:
+
 - Product name, color, origin
 - Original and discounted price
 - Units sold, product rating (1–5)
 - Shipping info, tags, categories
 
 ### Potential Uses:
+
 - Predict product performance
 - Identify sales-driving features
 - Optimize marketing and inventory
@@ -56,17 +57,14 @@ We applied both classification and regression techniques to understand what infl
 
 ## Pre-processing
 
-- Descriptive statistics for understanding data distribution
-- Handled missing values via imputation or removal
-- Removed duplicates and outliers (via IQR and Z-score)
-- Data normalization and feature engineering
-- Visualization via histograms, box plots, and heatmaps
+- **Missing Value Imputation**: Filled nulls in has_urgency_banner with 0. Replaced nulls in all rating-related columns with 0 for products that had no ratings.
+- **Data Cleaning & Feature Engineering**: Dropped unnecessary columns like IDs, URLs, and currency_buyer. Created new categorical features, including performance (based on units_sold), rating_range , and merchant_rating_range to aid analysis.
+- **Data Visualization:** Used bar plots, pie charts, and a correlation heatmap to explore product performance, variable distributions, and the relationships between features.
 
 ---
 
-## Models and Algorithms
+## Models
 
-### Classification Models (sales_level: Low, Medium, High)
 - Naive Bayes
 - Random Tree (Random Forest)
 - J48 (C4.5)
@@ -74,28 +72,27 @@ We applied both classification and regression techniques to understand what infl
 - IBk (k-NN)
 - ZeroR, OneR (baseline models)
 
-### Regression Models
-- Linear Regression
-- Decision Tree Regression
-- Support Vector Regression (SMOreg)
-
-### Feature Selection Methods
-- **Filter**: Information Gain
-- **Wrapper**: Model-driven selection
-
 ---
 
 ## Evaluation
 
-### Classification Metrics:
-- Precision, Recall, F1-score, Accuracy
-
-### Regression Metrics:
-- MAE, RMSE, R²
+| Model        | Accuracy | Precision | Recall | F1-Score | Runtime (s) |
+| ------------ | -------- | --------- | ------ | -------- | ----------- |
+| J48 Pruned   | 0.9034   | 0.8936    | 0.6667 | 0.7636   | 0.33        |
+| J48 Unpruned | 0.9072   | 0.8108    | 0.7143 | 0.7595   | 0.34        |
+| NaiveBayes   | 0.8856   | 0.7559    | 0.7619 | 0.7589   | 0.22        |
+| RandomTree   | 0.8989   | 0.7422    | 0.7540 | 0.7480   | 0.27        |
+| SMO          | 0.6802   | 0.9836    | 0.4762 | 0.6417   | 0.61        |
+| IBK          | 0.7190   | 0.8690    | 0.5794 | 0.6952   | 0.36        |
 
 ### Highlights:
-- **Best Classification Model**: J48 with 100% F1-score
-- **Best Regression Model**: Decision Tree Regression (lowest RMSE)
+
+- **J48 Unpruned** achieved the highest accuracy (90.72%) but showed signs of overfitting.
+- **J48 Pruned** offered the best F1-Score (0.7636) with balanced performance overall.
+- **NaiveBayes** was fast and efficient, with good results despite slightly lower accuracy.
+- **RandomTree** performed well but had lower stability in precision and recall.
+- **SMO** showed very high precision but poor recall, indicating class imbalance issues.
+- **IBk** had moderate accuracy but decent F1-Score, with slightly longer runtime.
 
 ---
 
@@ -103,21 +100,20 @@ We applied both classification and regression techniques to understand what infl
 
 - Improve performance with oversampling (SMOTE) and undersampling (NearMiss)
 - Explore ensemble methods and deep learning approaches
-- Apply cross-validation more extensively to prevent overfitting
 
 ## Getting Started
 
 This project is developed in Java using Visual Studio Code.
 
 ### Prerequisites:
+
 - Java Development Kit (JDK)
 - Visual Studio Code with Java extensions
 - WEKA (for model training and evaluation)
 
 ### How to Run:
+
 1. Clone the repository
 2. Import the project into VS Code
 3. Compile and run the Java files from the `src` folder
 4. Use WEKA for model building if applicable
-
-
